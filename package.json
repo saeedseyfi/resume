@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "My resume :D",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saeedseyfi/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "pdf"
+  ],
+  "author": "Saeed Seyfi <me@saeedseyfi.com> (http://saeedseyfi.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saeedseyfi/resume/issues"
+  },
+  "homepage": "https://github.com/saeedseyfi/resume#readme"
+}
