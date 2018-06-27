@@ -3,26 +3,18 @@ const execLocalBin = require('exec-local-bin');
 const open = require('open');
 const argv = require('yargs').argv;
 
-const mainFiles = ['resume.pug', 'resume.scss'];
+const mainFiles = ['resume.pug', 'mixins.pug', 'resume.scss'];
 
 function make() {
-    return new Promise((resolve, reject) => {
-        execLocalBin('relaxed ./resume.pug -t /tmp/ --build-once')
-            .then((stdout) => {
-                console.log(stdout);
-                open('./resume.pdf');
-                resolve();
-            })
-            .catch(reject);
-    });
+    return execLocalBin('relaxed ./resume.pug --build-once');
 }
 
-function watchFiles(files) {
-    files.map(file => watch(file, make));
+function watchAndMake(files, onMake) {
+    files.map(file => watch(file, () => make().then(onMake)));
 }
 
 if (argv.watch) {
-    watchFiles(mainFiles);
+    watchAndMake(mainFiles, () => open('resume_temp.htm'));
 } else {
-    make();
+    make().then(() => open('resume.pdf'));
 }

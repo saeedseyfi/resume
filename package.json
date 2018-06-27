@@ -4,8 +4,8 @@
   "description": "My resume :D",
   "main": "index.js",
   "scripts": {
-    "start": "node index --watch",
-    "make": "node index",
+    "start": "relaxed ./resume.pug",
+    "make": "relaxed ./resume.pug --build-once",
     "test": "echo \"Error: sorry, no test specified yet :(\" && exit 1"
   },
   "repository": {
@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/saeedseyfi/resume#readme",
   "dependencies": {
-    "exec-local-bin": "^1.0.3",
+    "exec-local-bin": "^1.1.1",
     "open": "0.0.5",
     "relaxedjs": "^0.1.8",
-    "yargs": "^11.0.0"
+    "yargs": "^11.1.0"
   }
 }

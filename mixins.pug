@@ -1,0 +1,46 @@
+mixin block(title, boxed=true)
+    .block(class=boxed && 'boxed')&attributes(attributes)
+        if title
+            h2=title
+        block
+
+mixin i(icon)
+    i.fa(class=`fa-${icon}`)
+
+mixin job(title, place, placeLink, dates, location)
+    .block.boxed.job
+        header
+            h3=title
+            span.place
+            ul
+                if place
+                    li
+                        | at
+                        |
+                        span.place
+                            if placeLink
+                                a(href=placeLink)=place
+                            else
+                                =place
+                if dates
+                    li #[+i('calendar')]
+                        |
+                        |
+                        =dates
+                if location
+                    li #[+i('map-marker')]
+                        |
+                        |
+                        =location
+        .details
+            block
+
+mixin rateItem(title, subtitle, rate)
+    .block.boxed.rate-item
+        h5=title
+            if subtitle
+                br
+                small=`(${subtitle})`
+        .rate
+            each value, index in new Array(10)
+                span(class=rate > index ? 'fill' : '')

@@ -1,3 +1,272 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Rubik:700|Roboto:400,500';
+
+$page-width: 8.5in;
+$page-height: 11in;
+
+$page-margin-top: .75in;
+$page-margin-right: .75in;
+$page-margin-bottom: .75in;
+$page-margin-left: .75in;
+$page-margin: $page-margin-top $page-margin-right $page-margin-bottom $page-margin-left;
+
+$margin: 1rem;
+
+$primary-color: #008CFF;
+$body-color: #384347;
+
+$heading-font-family: "Rubik", sans-serif;
+$body-font-family: "Roboto", sans-serif;
+$body-line-height: 1.3;
+$body-font-size: 1rem;
+$small-font-size: .8rem;
+
+@page {
+  size: $page_width $page_height;
+  margin: $page-margin;
+}
+
+:root {
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: $page-width;
+  height: $page-height;
+  margin: 0;
+  font-family: $body-font-family;
+  line-height: $body-line-height;
+  font-weight: 400;
+  color: #444;
+  hyphens: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font-family;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+h4,
+h5,
+h6 {
+  letter-spacing: .3px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 ($margin / 2) 0;
+}
+
 h1 {
-  color: red;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: $primary-color;
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.block {
+  margin-bottom: $margin * 2;
+
+  &.boxed {
+    border-bottom: 1px dashed lighten($body-color, 65%);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    border-bottom: 3px solid $body-color;
+    margin-bottom: $margin;
+  }
+}
+
+#content {
+  padding: 0 $margin 0 0;
+  width: 70%;
+}
+
+#sidebar {
+  padding: 0 0 ($small-font-size * $body-line-height * 2 + $margin) $margin;
+  width: 30%;
+  position: relative;
+}
+
+#heading {
+  display: flex;
+
+  .info {
+    width: calc(100% - 120px);
+    padding-right: $margin;
+  }
+
+  .image {
+    width: 120px;
+
+    img {
+      border-radius: .4rem;
+      margin-left: auto;
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+  }
+
+  span {
+    font-size: 1.5rem;
+    font-family: $heading-font-family;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  i {
+    color: $primary-color;
+  }
+
+  .links {
+    display: table;
+    margin: $margin 0 $margin * 2;
+    width: 100%;
+
+    ul {
+      display: table-row;
+
+      li {
+        display: table-cell;
+      }
+    }
+  }
+
+  a {
+    color: $body-color;
+    text-decoration: none;
+  }
+}
+
+.job {
+  page-break-inside: avoid;
+
+  header {
+    ul {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      flex-wrap: nowrap;
+      text-align: center;
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .details {
+    ul {
+      list-style: disc;
+      padding-left: 2 * $margin;
+    }
+  }
+
+  .place {
+    color: $primary-color;
+    font-weight: 500;
+    font-family: $heading-font-family;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  h3 {
+    margin-bottom: $margin / 4;
+  }
+
+  h4 {
+    margin-bottom: 0;
+    font-weight: 500;
+
+    & + p,
+    & + ul {
+      margin-top: 0;
+    }
+  }
+}
+
+.rate-item {
+  padding-bottom: $margin;
+  margin-bottom: $margin;
+}
+
+.rate {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  span {
+    width: 1.4rem;
+    height: .4rem;
+    border-radius: .4rem;
+    background: lighten($body-color, 65%);
+
+    &.fill {
+      background: $primary-color;
+    }
+  }
+}
+
+#repo {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: $margin;
+  right: 0;
+  font-size: $small-font-size;
 }

@@ -1,5 +1,95 @@
-h1 Saeed Seyfi
-p Hooray!
-
+include mixins.pug
 style
     include:scss resume.scss
+
+header#heading
+    .info
+        h1 Saeed Seyfi
+        span Senior Frontend/JavaScript Developer
+
+        .links
+            ul
+                li
+                    a(href='mailto:me@saeedseyfi.com', target='_blank') #[+i('at')] me@saeedseyfi.com
+                li
+                    a(href='tel:+989385482324', target='_blank') #[+i('phone')] +98 938 548 2324
+                li
+                    +i('map-marker')
+                    |
+                    | Tehran, Iran
+            ul
+                li
+                    a(href='https://github.com/saeedseyfi', target='_blank') #[+i('github')] github.com/saeedseyfi
+                li
+                    a(href='https://www.linkedin.com/in/saeedseyfi', target='_blank') #[+i('linkedin')] linkedin.com/in/saeedseyfi
+                li
+                    a(href='https://stackoverflow.com/users/2980087/saeed-seyfi', target='_blank') #[+i('stack-overflow')] stackoverflow.com/users/2980087
+
+    .image
+        img(src='./avatar.jpg', width=120, height=120)
+
+main
+    article#content
+        +block('Summary')
+            p I am a frontend developer with about 5 years experience working with clients/companies from around the world, providing javascript/frontend development. I help companies and agencies build standards-compliant and clean frontend foundations for fast, accessible and responsive websites and applications.
+            p I work with small and medium-sized businesses, design teams and agencies, building fast, responsive and usable frontends, with a strong focus on performance and UX.
+
+        +block('Experience', false)
+            +job("Lead Frontend Developer", "Sheypoor", "https://www.sheypoor.com", "11/2015 - Ongoing", "Dubai, UAE and Tehran, Iran")
+                p Sheypoor is one of the lead classifieds marketplaces in Iran with over 1.5M user sessions per day.
+
+                h4 Tools and technologies I used:
+                p Knockout.js, Browserify, Gulp, NPM, SCSS, Volt(Twig), Pug(Jade), React, Redux, Redux-Sagas, React-Native, Git
+
+                h4 Main focuses and projects:
+                ul
+                    li Developed the new UI, focusing on performance, page size, and user experience.
+                    li Developed Sheypoor AMP version.
+                    li Developed Sheypoor's real-time messaging system over XMPP with only 40kB JS size.
+                    li Created a mobile app written with TypeScript, React, Redux, Redux-Sagas and React-Native.
+
+            +job("Senior Frontend Developer", "Jumbula", "https://www.jumbula.com", "4/2014 - 11/2015", "Isfahan, Iran")
+                p Jumbula.com is an online registration and management software for events in the U.S.
+
+                h4 Tools and technologies:
+                p HTML5, CSS3, jQuery, KendoUI, Angular.js
+
+                h4 Main focuses and projects:
+                ul
+                    li Developed users dashboard using Angular.js.
+                    li Worked on svg animations.
+                    li Developed drag and drop page-builder to create dynamic pages.
+                    li Developed drag and drop form-builder to create dynamic registration forms.
+
+            +job("Freelance Frontend Developer", "home", false, "2013 - 11/2014", "Isfahan, Iran")
+                p While I was a collage student, I started to do some freelance frontend projects.
+
+                h4 Tools and technologies:
+                p HTML5, CSS3, JavaScript, jQuery, Wordpress, IPB
+
+                h4 Main focuses and projects:
+                ul
+                    li Create different themes for Wordpress/IPB/MyBB.
+
+        +block('Projects')
+            p Projects
+
+    aside#sidebar
+        +block('TOOLS/SKILLS', false)
+            +rateItem('JavaScript', 'ES5/ES6/TypeScript', 9)
+            +rateItem('Version controllers', 'Git/TFS/...', 9)
+            +rateItem('Task runners', 'NPM scripts/Gulp/Grunt/...', 9)
+            +rateItem('Bundlers', 'Browserify/Webpack/Rollup/...', 9)
+            +rateItem('React/Redux/React-Native', 'Redux-Sagas/Redux-Thunk/...', 6)
+            +rateItem('HTML5/CSS3', 'Template engines/CSS preprocessors', 9)
+            +rateItem('Knockout.js', null, 8)
+            +rateItem('jQuery', null, 10)
+
+        +block('Languages', false)
+            +rateItem('English', null, 6)
+            +rateItem('Persian', null, 10)
+
+        #repo
+            em My resume is a git repo:
+                br
+                a(href='https://git.io/f49SC', target='_blank') git.io/f49SC
