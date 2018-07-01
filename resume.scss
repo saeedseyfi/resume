@@ -28,7 +28,7 @@ $small-font-size: .8rem;
 }
 
 :root {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 * {
@@ -112,6 +112,10 @@ main {
     border-bottom: 1px dashed lighten($body-color, 65%);
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   h2 {
     text-transform: uppercase;
     border-bottom: 3px solid $body-color;
@@ -185,7 +189,7 @@ main {
 }
 
 .job {
-  page-break-inside: avoid;
+  //page-break-inside: avoid;
 
   header {
     ul {
@@ -243,12 +247,17 @@ main {
 .rate-item {
   padding-bottom: $margin;
   margin-bottom: $margin;
+
+  h5 {
+    margin-bottom: 0;
+  }
 }
 
 .rate {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin-top: $margin / 2;
 
   span {
     width: 1.4rem;

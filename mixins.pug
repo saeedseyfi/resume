@@ -37,10 +37,11 @@ mixin job(title, place, placeLink, dates, location)
 
 mixin rateItem(title, subtitle, rate)
     .block.boxed.rate-item
-        h5=title
+        h5!=title
             if subtitle
                 br
-                small=`(${subtitle})`
-        .rate
-            each value, index in new Array(10)
-                span(class=rate > index ? 'fill' : '')
+                small=subtitle
+        //if rate
+            .rate
+                each value, index in new Array(10)
+                    span(class=rate > index ? 'fill' : '')
