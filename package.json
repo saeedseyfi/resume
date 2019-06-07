@@ -24,8 +24,8 @@
   "homepage": "https://github.com/saeedseyfi/resume#readme",
   "dependencies": {
     "exec-local-bin": "^1.1.1",
-    "open": "0.0.5",
-    "relaxedjs": "^0.1.8",
+    "open": "^6.3.0",
+    "relaxedjs": "^0.2.2",
     "yargs": "^11.1.0"
   }
 }
