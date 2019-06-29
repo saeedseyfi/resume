@@ -7,7 +7,7 @@ mixin block(title, boxed=true)
 mixin i(icon)
     i.fa(class=`fa-${icon}`)
 
-mixin job(title, place, placeLink, dates, location)
+mixin job(title, place, placeLink, dates, location, withAt=true)
     .block.boxed.job
         header
             h3=title
@@ -15,8 +15,9 @@ mixin job(title, place, placeLink, dates, location)
             ul
                 if place
                     li
-                        | at
-                        |
+                        if withAt
+                            | at
+                            |
                         span.place
                             if placeLink
                                 a(href=placeLink)=place
