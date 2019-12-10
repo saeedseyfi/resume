@@ -26,6 +26,6 @@
     "exec-local-bin": "^1.1.1",
     "open": "^6.4.0",
     "relaxedjs": "^0.2.2",
-    "yargs": "^13.3.0"
+    "yargs": "^14.2.0"
   }
 }
