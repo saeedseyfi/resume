@@ -1,3 +1,7 @@
+**DECOMMISSIONED** infavour of [ResumeBuilder](https://github.com/saeedseyfi/resume-builder). The new solution doesn't require any programming knowledge. Do you know how to drag and drom? then it works for you.
+
+---
+
 # Resume
 A slick, simple and easy to use resume template, that turns pug/html and scss/css into pdf.
 
