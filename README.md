@@ -1,4 +1,4 @@
-**DECOMMISSIONED** infavour of [ResumeBuilder](https://github.com/saeedseyfi/resume-builder).
+➡️ **DECOMMISSIONED** infavour of [ResumeBuilder](https://github.com/saeedseyfi/resume-builder).
 
 The new solution doesn't require any programming knowledge. Do you know how to drag and drop? Then it works for you. 🪄
 
